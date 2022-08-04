@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본 코딩 01</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: inherit;
+            font-weight: inherit;
+            box-sizing: border-box;
+        }
+
+        body {
+            line-height: 1;
+            color: #444444;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        img {
+            max-width: 100%;
+            vertical-align: middle;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .box {
+            /* background: #f00; */
+        }
+
+        .box~span {
+            color: red;
+        }
+
+        span:not(.color) {
+            color: red;
+        }
+
+        #sec01 {
+            display: flex;
+            gap: 30px;
+            background: #ff0;
+        }
+
+        #sec01 div {
+            width: 200px;
+            background: RED;
+            color: white;
+            text-align: center;
+        }
+
+        .sun {
+            position: absolute;
+            top: 100px;
+            right: 100px;
+            animation: sun_move 10s infinite linear;
+        }
+
+
+        .sun:hover {
+            animation: none;
+        }
+
+        @keyframes sun_move {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        #trn01 {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        #trn01 h2 {
+            font-size: 30px;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+        }
+
+        #trn01>p {
+            font-size: 15px;
+            font-weight: 400;
+            margin: 0 0 30px 0;
+        }
+
+        #trn01 .container {
+            width: 1170px;
+            margin: 0 auto;
+            display: flex;
+            gap: 30px;
+        }
+
+        #trn01 .container img {
+            margin: 0 0 15px 0;
+        }
+
+        #trn01 .container p {
+            font-size: 15px;
+            font-weight: 400;
+            margin: 0 0 15px 0;
+        }
+
+        #trn01 .container a {
+            display: inline-block;
+            background: #444444;
+            color: white;
+            width: 100px;
+            height: 30px;
+            padding: 7px 0 0 0;
+            border-radius: 15px;
+        }
+
+        #trn01 .container a:hover {
+            background: #FFBE0D;
+            border-radius: 0;
+            transition: border-radius 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sun">
+        <img src="img/sun.png" alt="">
+    </div>
+    <hr />
+    <span>대한민국</span>
+    <div class="box">우리나라
+        <span class="color">대한민국</span>
+    </div>
+    <span>대한민국</span>
+
+    <section id="sec01">
+        <div>가</div>
+        <div>나</div>
+        <div>다</div>
+    </section>
+
+    <section id="trn01">
+        <h2>우리나라 대한민국</h2>
+        <p>우리나라 대한민국 가자 기영아 순이야 나랑 물보러 가지 않을래</p>
+
+        <div class="container">
+            <figure>
+                <img src="img/lesedilarona01.jpg" alt="">
+                <P>우리나라 제품 01</P>
+                <a href="#">구매하기</a>
+            </figure>
+            <figure>
+                <img src="img/lesedilarona02.jpg" alt="">
+                <P>일본나라 제품 02</P>
+                <a href="#">구매하기</a>
+            </figure>
+            <figure>
+                <img src="img/lesedilarona03.jpg" alt="">
+                <P>우리나라</P>
+                <a href="#">구매하기</a>
+            </figure>
+        </div>
+
+    </section>
+</body>
+
+</html>
